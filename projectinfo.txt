@@ -1,146 +1,26 @@
-Building off of Project 1:
+Building off Project 2:
 
-• Add client side HTML5 and JavaScript form validation for user input
+• Remove/disable all JavaScript/HTML5 Form Validation, from Project 2.  You can do this by removing any <script> tags and adding <form> attribute novalidate.
 
-• Validation Rules for Registration Fields (do not change the input types from Project 1, these validation character lengths are going to be the database column sizes, so for radio/drop down options, just do not give the user a value under/over the limit):
-1) User
+• Add server side PHP form validation for user input.  PHP will not be doing any of the phone/zip formatting.  Leave that to the JavaScript side of things.  Since we are disabling the JavaScript for this project, it is ok to make the user type out the phone/zip format explicitly so that PHP will accept formatted input.
 
-a. Required Field
+• Use PHP to do all the same form validation that JavaScript was doing on the client side.
 
-b. Max length 50 characters, minimum length 6 characters
+o If PHP detects invalid form data, return to Registration page with messaging on each form field that failed. Make sure to have all valid and invalid user data populated on the
+screen so the user does not have to remember what was typed.
 
-2) Password
-
-a. Required Field
-
-b. Max length 50 characters, minimum length 8 characters
-
-c. Enforce 1 capital, 1 lowercase, 1 digit, 1 special character
-
-3) Repeat Password
-
-a. Required Field
-
-b. Max length 50 characters, minimum length 8 characters
-
-c. Enforce 1 capital, 1 lowercase, 1 digit, 1 special character
-
-d. Ensure password fields match
-
-4) First Name
-
-a. Required Field
-
-b. Max length 50 characters
-
-5) Last Name
-
-a. Required Field
-
-b. Max length 50 characters
-
-6) Address line 1
-
-a. Required Field
-
-b. Max length 100 characters
-
-7) Address line 2
-
-a. Optional Field
-
-b. Max length 100 characters
-
-8) City
-
-a. Required Field
-
-b. Max length 50 characters
-
-9) State
-
-a. Required Field
-
-b. Max length 52 characters
-
-10) Zip Code
-
-a. Required Field
-
-b. Max length 10 characters, minimum length 5 digits
-
-c. Use jQuery/JavaScript to dynamically adjust user input to match either xxxxx or xxxxx-xxxx format (this should be done either as the user is typing or after leaving the field)
-
-11) Phone Number
-
-a. Required Field
-
-b. Max length 12 characters
-
-c. Use jQuery/JavaScript to dynamically adjust user input to
- match xxx-xxx-xxxx (this should be done either as the user
-  is typing or after leaving the field) format
-
-12) Email
-
-a. Required Field
-
-b. Email format, x@x.x format, where x is a placeholder for valid alphanumeric characters
-
-13) Gender
-
-a. Required Field
-
-b. Max length 50 characters
-
-14) Marital Status
-
-a. Required Field
-
-b. Max length 50 characters
-
-15) Date of Birth
-
-a. Required Field
-
-b. MM/dd/yyyy format
-
-16) Submit Button
-
-a. Submits valid user data only
-
-17) Reset Button
-
-a. Resets all fields to default value (empty, for most fields)
+o Upon successful PHP form validation, submit valid data to the Registration Confirmation page and display a confirmation page. This confirmation page will be read only, so the
+user cannot modify the data on this screen.
 
 ----------------------------------------------------------------------------------------------------
 
-• When validating user input with JavaScript. Check all user input fields.
-
-o All valid user inputs are marked green with some icon or messaging indicating good
-input.
-o All invalid user inputs are marked red with some icon or messaging indicating bad input.
-
-o Make sure all valid user data is submitted to the server
-
-----------------------------------------------------------------------------------------------------
-
-• Follow coding standards
-
-o http://www.w3schools.com/html/html5_syntax.asp
-
-Links to an external site.
-
-o https://www.w3schools.com/js/js_conventions.asp
-
-Links to an external site.
-
-o https://www.w3schools.com/js/js_best_practices.asp
+• Follow coding standards http://www.w3schools.com/html/html5_syntax.asp
 
 Links to an external site.
 
 ----------------------------------------------------------------------------------------------------
 
-To submit your project:
+To submit your project, you have two options:
 
-See email from the Professor
+    Submit your GitLab link to your project
+    Zip up your project folder when finished and upload to Canvas.

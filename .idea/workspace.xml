@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc3f0299-cb15-4cd0-ac48-d15d51ef0e8a" name="Changes" comment="Finished adding:&#10;state&#10;gender&#10;marital status&#10;and dob.&#10;&#10;That is it!&#10;Time to turn in project 2 and start on project 3!">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="fc3f0299-cb15-4cd0-ac48-d15d51ef0e8a" name="Changes" comment="First Commit of project 3!&#10;&#10;Time to organize and work as fast as possible! I have less than 3 days to get this finished to pass the class, we got this!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/validation.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +22,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -49,6 +49,21 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Full-Stack-Class-Project-3" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Full-Stack-Class-Project-3" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -68,6 +83,7 @@
       <workItem from="1702430347106" duration="11316000" />
       <workItem from="1702488628342" duration="13787000" />
       <workItem from="1702506973540" duration="4000" />
+      <workItem from="1702506988974" duration="840000" />
     </task>
     <task id="LOCAL-00001" summary="Got organized on my new windows machine after apache2 and nginx bricked my linux laptop trying to both run at startup with default config values &gt;.&lt;. I have managed to start the javascript validation code, definitely still in the beginning stages though. Steady as she goes.">
       <option name="closed" value="true" />
@@ -141,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702504829478</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="First Commit of project 3!&#10;&#10;Time to organize and work as fast as possible! I have less than 3 days to get this finished to pass the class, we got this!">
+      <option name="closed" value="true" />
+      <created>1702507088831</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702507088831</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +192,7 @@
     <MESSAGE value="Adding in validation code for on blur events.&#10;&#10;Still need to add:&#10;password reqs&#10;repeat password reqs&#10;zipcode reqs&#10;phone number reqs&#10;&#10;and submit validation for:&#10;state&#10;gender&#10;marital status&#10;and dob.&#10;&#10;looking like I will be finishing tomorrow morning." />
     <MESSAGE value="Finished adding:&#10;password reqs&#10;repeat password reqs&#10;zipcode reqs&#10;phone number reqs&#10;&#10;stil working on:&#10;state&#10;gender&#10;marital status&#10;and dob.&#10;&#10;All most done!! Run Adam Run!" />
     <MESSAGE value="Finished adding:&#10;state&#10;gender&#10;marital status&#10;and dob.&#10;&#10;That is it!&#10;Time to turn in project 2 and start on project 3!" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="First Commit of project 3!&#10;&#10;Time to organize and work as fast as possible! I have less than 3 days to get this finished to pass the class, we got this!" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Commit of project 3!&#10;&#10;Time to organize and work as fast as possible! I have less than 3 days to get this finished to pass the class, we got this!" />
   </component>
 </project>

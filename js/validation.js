@@ -159,6 +159,7 @@ function validateEMail() {
 eMail.addEventListener("blur", validateEMail);
 
 function submitValidation(event) {
+    alert("Project 3 is live");
     let pDCounter = 0;
 //X 9 State
     if (state.options[state.selectedIndex].value === "na") {
