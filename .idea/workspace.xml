@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc3f0299-cb15-4cd0-ac48-d15d51ef0e8a" name="Changes" comment="projectInfo updated, time to start scafolding the project!">
+    <list default="true" id="fc3f0299-cb15-4cd0-ac48-d15d51ef0e8a" name="Changes" comment="Updated to a .php file and getting things started!&#10;&#10;Taking some stabs at this php code, think I am starting to understand a few basics, but this will require a little focus.&#10; &#10; A little confusing, but so far so good though.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Animations.html" beforeDir="false" afterPath="$PROJECT_DIR$/Animations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projectinfo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/projectinfo.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/registration.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +89,7 @@
       <workItem from="1702508280521" duration="381000" />
       <workItem from="1702509555896" duration="1756000" />
       <workItem from="1702526899571" duration="1089000" />
-      <workItem from="1702528197159" duration="1562000" />
+      <workItem from="1702528197159" duration="3034000" />
     </task>
     <task id="LOCAL-00001" summary="Got organized on my new windows machine after apache2 and nginx bricked my linux laptop trying to both run at startup with default config values &gt;.&lt;. I have managed to start the javascript validation code, definitely still in the beginning stages though. Steady as she goes.">
       <option name="closed" value="true" />
@@ -183,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702508550680</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updated to a .php file and getting things started!&#10;&#10;Taking some stabs at this php code, think I am starting to understand a few basics, but this will require a little focus.&#10; &#10; A little confusing, but so far so good though.">
+      <option name="closed" value="true" />
+      <created>1702529828932</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702529828932</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +216,7 @@
     <MESSAGE value="Finished adding:&#10;state&#10;gender&#10;marital status&#10;and dob.&#10;&#10;That is it!&#10;Time to turn in project 2 and start on project 3!" />
     <MESSAGE value="First Commit of project 3!&#10;&#10;Time to organize and work as fast as possible! I have less than 3 days to get this finished to pass the class, we got this!" />
     <MESSAGE value="projectInfo updated, time to start scafolding the project!" />
-    <option name="LAST_COMMIT_MESSAGE" value="projectInfo updated, time to start scafolding the project!" />
+    <MESSAGE value="Updated to a .php file and getting things started!&#10;&#10;Taking some stabs at this php code, think I am starting to understand a few basics, but this will require a little focus.&#10; &#10; A little confusing, but so far so good though." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated to a .php file and getting things started!&#10;&#10;Taking some stabs at this php code, think I am starting to understand a few basics, but this will require a little focus.&#10; &#10; A little confusing, but so far so good though." />
   </component>
 </project>
