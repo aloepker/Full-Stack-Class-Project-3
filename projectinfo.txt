@@ -1,26 +1,28 @@
 Building off Project 2:
 
-• Remove/disable all JavaScript/HTML5 Form Validation, from Project 2.  You can do this by removing any <script> tags and adding <form> attribute novalidate.
+• Remove/disable all JavaScript/HTML5 Form Validation, from Project 2.
+  You can do this by removing any <script> tags and adding <form>
+   attribute novalidate.
 
-• Add server side PHP form validation for user input.  PHP will not be doing any of the phone/zip formatting.  Leave that to the JavaScript side of things.  Since we are disabling the JavaScript for this project, it is ok to make the user type out the phone/zip format explicitly so that PHP will accept formatted input.
+• Add server side PHP form validation for user input.
+  PHP will not be doing any of the phone/zip formatting.
+    Leave that to the JavaScript side of things.
+      Since we are disabling the JavaScript for this project,
+       it is ok to make the user type out the phone/zip format
+        explicitly so that PHP will accept formatted input.
 
-• Use PHP to do all the same form validation that JavaScript was doing on the client side.
+• Use PHP to do all the same form validation that
+   JavaScript was doing on the client side.
 
-o If PHP detects invalid form data, return to Registration page with messaging on each form field that failed. Make sure to have all valid and invalid user data populated on the
+o If PHP detects invalid form data, return to Registration page
+with messaging on each form field that failed. Make sure to have all
+ valid and invalid user data populated on the
 screen so the user does not have to remember what was typed.
 
-o Upon successful PHP form validation, submit valid data to the Registration Confirmation page and display a confirmation page. This confirmation page will be read only, so the
+o Upon successful PHP form validation, submit valid data to the
+ Registration Confirmation page and display a confirmation page.
+  This confirmation page will be read only, so the
 user cannot modify the data on this screen.
-
-----------------------------------------------------------------------------------------------------
 
 • Follow coding standards http://www.w3schools.com/html/html5_syntax.asp
 
-Links to an external site.
-
-----------------------------------------------------------------------------------------------------
-
-To submit your project, you have two options:
-
-    Submit your GitLab link to your project
-    Zip up your project folder when finished and upload to Canvas.

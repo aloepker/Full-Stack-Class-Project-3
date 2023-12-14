@@ -1,3 +1,60 @@
+<?php
+// Define variables and initialize with empty values
+$username = $password = $repeatPassword = $firstName = $lastName = $address1 = $address2 = $city = $state = $zipCode = $phoneNumber = $email = $gender = $maritalStatus = $dob = "";
+$errors = [];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    echo "Form submitted!";
+    // Validate Username
+    if (empty($_POST["Username"])) {
+        $errors["Username"] = "Username is required";
+    } else {
+        $username = test_input($_POST["Username"]);
+        // Perform additional username validation if needed
+    }
+
+    // Validate Password
+    if (empty($_POST["Password"])) {
+        $errors["Password"] = "Password is required";
+    } else {
+        $password = test_input($_POST["Password"]);
+        // Perform additional password validation if needed
+    }
+
+    // Validate Repeat Password
+    if (empty($_POST["Repeat_Password"]) || $_POST["Repeat_Password"] !== $_POST["Password"]) {
+        $errors["Repeat_Password"] = "Passwords must match";
+    } else {
+        $repeatPassword = test_input($_POST["Repeat_Password"]);
+    }
+
+    // Validate First Name
+    if (empty($_POST["First_Name"])) {
+        $errors["First_Name"] = "First Name is required";
+    } else {
+        $firstName = test_input($_POST["First_Name"]);
+        // Perform additional validation if needed
+    }
+
+    // Perform validation for other fields similarly
+    var_dump($errors);
+    // If no errors, you can proceed with further processing
+    if (empty($errors)) {
+        // Process the form data, insert into a database, send emails, etc.
+        // ...
+
+        echo "Registration successful!";
+    }
+}
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
+
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -10,7 +67,7 @@
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
   <link rel="stylesheet" href="css/main.css">
   <meta name="theme-color" content="#faaafa">
-  <script src="js/validation.js" defer></script>
+ <!-- <script src="js/validation.js" defer></script> -->
 </head>
 <body>
 <div id="container">
@@ -24,7 +81,7 @@
     <nav>
       <p>Page Navigation</p>
       <a href="index.html">Home</a>
-      <a href="registration.html">Registration</a>
+      <a href="registration.php">Registration</a>
       <a href="Animations.html">Animations</a>
     </nav>
 
@@ -32,8 +89,8 @@
     <main>
       <div class="container">
       <p>Fill out to become a Drifter of Forza!</p>
-<-- see page 73 in the book for best practices -->
-      <form id="theForm" action="" method="POST">
+<!-- see page 73 in the book for best practices -->
+      <form id="theForm" action="/registration.php" method="POST">
         <label for="Username">Username:
           <input type="text" id="Username" name="Username" placeholder="Username Here"></label>
           <label class="e" id="U"> Username must be between 6 and 50 characters  </label>
