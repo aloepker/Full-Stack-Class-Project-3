@@ -1,4 +1,5 @@
 <?php
+
 $username = $password = $repeatPassword = $firstName = $lastName = $address1 = $address2 = $city = $state = $zipCode = $phoneNumber = $email = $gender = $maritalStatus = $dob = '';
 $errors = [];
 
