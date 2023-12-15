@@ -19,6 +19,15 @@ body{
   font-size: 1.4em; /* Adjust the font size */
   /* Add any other styles you want */
 }
+.confirm{
+  color: blue
+}
+.confirm a{
+  color: green;
+}
+.confirm a:visited{
+  color: aqua;
+}
 .spin span{
 display: inline-block;
   animation-name: spin;

@@ -133,9 +133,9 @@ zipCode.addEventListener("blur", validateZipCode);
 
 //X 11 phone number
 function validatePhoneNumber() {
-    if ((phoneNumber.value.trim().length === 10) && phoneNumber.value.match(digitCheck)) { //&& phoneNumber.value.match(digitCheck)
-     //formatting goes here
-        phoneNumber.value = '(' + phoneNumber.value.slice(0, 3) + ') ' + phoneNumber.value.slice(3, 6) + '-' + phoneNumber.value.slice(6, 10);
+    let strippedPhoneNumber = phoneNumber.value.replace(/\D/g, '');
+    if ((strippedPhoneNumber.value.trim().length === 10) && strippedPhoneNumber.value.match(digitCheck)) {
+        phoneNumber.value = '(' + strippedPhoneNumber.value.slice(0, 3) + ') ' + strippedPhoneNumber.value.slice(3, 6) + '-' + strippedPhoneNumber.value.slice(6, 10);
         document.getElementById("PN").style.visibility = 'hidden';
         return 0;
     } else {
