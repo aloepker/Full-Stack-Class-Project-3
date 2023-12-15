@@ -36,17 +36,80 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Perform additional validation if needed
     }
 
-    // Perform validation for other fields similarly
-    var_dump($errors);
-    // If no errors, you can proceed with further processing
-    if (empty($errors)) {
-        // Process the form data, insert into a database, send emails, etc.
-        // ...
-
-        echo "Registration successful!";
+    // Validate Last Name
+    if (empty($_POST["Last_Name"])) {
+        $errors["Last_Name"] = "Last Name is required";
+    } else {
+        $lastName = test_input($_POST["Last_Name"]);
+        // Perform additional validation if needed
     }
-}
 
+    // Validate Address
+    if (empty($_POST["Address1"])) {
+        $errors["Address1"] = "Address is required";
+    } else {
+        $address1 = test_input($_POST["Address1"]);
+        // Perform additional validation if needed
+    }
+
+    // Validate City
+    if (empty($_POST["City"])) {
+        $errors["City"] = "City is required";
+    } else {
+        $city = test_input($_POST["City"]);
+        // Perform additional validation if needed
+    }
+
+    // Validate State
+    if ($_POST["state"] == "na") {
+        $errors["State"] = "Please select a State";
+    } else {
+        $state = test_input($_POST["state"]);
+    }
+
+    // Validate Zip Code
+    if (empty($_POST["Zip_Code"]) || !preg_match("/^\d{5}(-\d{4})?$/", $_POST["Zip_Code"])) {
+        $errors["Zip_Code"] = "Zipcode must be a valid format (e.g., 12345 or 12345-6789)";
+    } else {
+        $zipCode = test_input($_POST["Zip_Code"]);
+    }
+
+    // Validate Phone Number
+    if (empty($_POST["Phone_Number"]) || !preg_match("/^\d{10}$/", $_POST["Phone_Number"])) {
+        $errors["Phone_Number"] = "Phone Number must be 10 digits with no punctuation";
+    } else {
+        $phoneNumber = test_input($_POST["Phone_Number"]);
+    }
+
+    // Validate Email
+    if (empty($_POST["Email"]) || !filter_var($_POST["Email"], FILTER_VALIDATE_EMAIL)) {
+        $errors["Email"] = "Please enter a valid Email address";
+    } else {
+        $email = test_input($_POST["Email"]);
+    }
+
+    // Validate Gender
+    if (empty($_POST["Gender"])) {
+        $errors["Gender"] = "Please select a Gender";
+    } else {
+        $gender = test_input($_POST["Gender"]);
+    }
+
+    // Validate Marital Status
+    if (empty($_POST["Marital_Status"])) {
+        $errors["Marital_Status"] = "Please select Marital Status";
+    } else {
+        $maritalStatus = test_input($_POST["Marital_Status"]);
+    }
+
+    // Validate Date of Birth
+    if (empty($_POST["DOB"])) {
+        $errors["DOB"] = "Please enter your date of birth";
+    } else {
+        $dob = test_input($_POST["DOB"]);
+    }
+
+}
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -90,6 +153,16 @@ function test_input($data) {
       <div class="container">
       <p>Fill out to become a Drifter of Forza!</p>
 <!-- see page 73 in the book for best practices -->
+          <?php if (!empty($errors)): ?>
+              <div class="error-container">
+                  <p>Please fix the following errors:</p>
+                  <ul>
+                      <?php foreach ($errors as $error): ?>
+                          <li><?php echo $error; ?></li>
+                      <?php endforeach; ?>
+                  </ul>
+              </div>
+          <?php endif; ?>
       <form id="theForm" action="/registration.php" method="POST">
         <label for="Username">Username:
           <input type="text" id="Username" name="Username" placeholder="Username Here"></label>

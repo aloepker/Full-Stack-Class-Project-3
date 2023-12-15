@@ -14,7 +14,11 @@ body{
   color: red;
   visibility: hidden;
 }
-
+.error-container {
+  color: red; /* Choose a color for error messages */
+  font-size: 1.4em; /* Adjust the font size */
+  /* Add any other styles you want */
+}
 .spin span{
 display: inline-block;
   animation-name: spin;
