@@ -1,10 +1,10 @@
 <?php
 // Define variables and initialize with empty values
-$username = $password = $repeatPassword = $firstName = $lastName = $address1 = $address2 = $city = $state = $zipCode = $phoneNumber = $email = $gender = $maritalStatus = $dob = "";
+$username = $password = $repeatPassword = $firstName = $lastName = $address1 = $address2 = $city = $state = $zipCode = $phoneNumber = $email = $gender = $maritalStatus = $dob = '';
 $errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "Form submitted!";
+
     // Validate Username
     if (empty($_POST["Username"])) {
         $errors["Username"] = "Username is required";
@@ -109,6 +109,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $dob = test_input($_POST["DOB"]);
     }
 
+if (!empty($errors)) {
+        echo "Errors found"; // Add this line for debugging
+    }
+
 }
 function test_input($data) {
     $data = trim($data);
@@ -165,49 +169,49 @@ function test_input($data) {
           <?php endif; ?>
       <form id="theForm" action="/registration.php" method="POST">
         <label for="Username">Username:
-          <input type="text" id="Username" name="Username" placeholder="Username Here"></label>
+          <input type="text" id="Username" name="Username" placeholder="Username Here" value="<?php echo htmlspecialchars($username); ?>"></label>
           <label class="e" id="U"> Username must be between 6 and 50 characters  </label>
           <br>
 
         <label for="Password">Password:
-        <input type="password" id=Password name="Password" placeholder="Password Here"></label>
+        <input type="password" id="Password" name="Password" placeholder="Password Here" value="<?php echo htmlspecialchars($password); ?>"></label>
         <label class="e" id="P"> Password must be between 8 and 50 characters  </label>
 
         <br>
 
         <label for="Repeat_Password">Repeat Password:
-        <input type="password" id=Repeat_Password name="Repeat Password" placeholder="Password Again Here"></label>
+        <input type="password" id="Repeat_Password" name="Repeat Password" placeholder="Password Again Here" value="<?php echo htmlspecialchars($repeatPassword); ?>"></label>
         <label class="e" id="PR"> Passwords must match                          </label>
         <br>
 
         <label for="First_Name">First Name:
-        <input type="text" id=First_Name name="First Name" placeholder="First Name Here"></label>
+        <input type="text" id=First_Name name="First Name" placeholder="First Name Here" value="<?php echo htmlspecialchars($firstName); ?>"></label>
         <label class="e" id="FN"> First Name Required. Must be between less than 50 characters</label>
         <br>
 
         <label for="Last_Name">Last Name:
-        <input type="text" id=Last_Name name="Last Name" placeholder="Last Name Here"></label>
+        <input type="text" id=Last_Name name="Last Name" placeholder="Last Name Here" value="<?php echo htmlspecialchars($lastName); ?>"></label>
         <label class="e" id="LN"> Last Name Required. Must be less than 50 characters </label>
         <br>
 
         <label for="Address1">Address:
-        <input type="text" id=Address1 name="Address1" placeholder="Address Line 1 Here"></label>
+        <input type="text" id=Address1 name="Address1" placeholder="Address Line 1 Here" value="<?php echo htmlspecialchars($address1); ?>"></label>
         <label class="e" id="A"> Address Required. Must be less than 100 characters  </label>
         <br>
 
         <label for="Address2">
-        <input type="text" id=Address2 name="Address2" placeholder="Address Line 2 Here"></label>
+        <input type="text" id=Address2 name="Address2" placeholder="Address Line 2 Here" value="<?php echo htmlspecialchars($address2); ?>"></label>
         <label class="e" id="A2"> Must be less than 100 characters                     </label>
         <br>
 
         <label for="City">City:
-        <input type="text" id=City name="City" placeholder="City Name Here"></label>
+        <input type="text" id=City name="City" placeholder="City Name Here" value="<?php echo htmlspecialchars($city); ?>"></label>
         <label class="e" id="C"> City Name Required. Must be less than 50 characters </label>
         <br>
 
         <label for="State">State:
         <select name="state" id="State">
-          <option value="na" selected="selected">Select a State</option>
+          <option value="na" selected="selected" <?php echo ($state === 'na') ? 'selected' : ''; ?>>Select a State</option>
           <option value="AL">Alabama</option>
           <option value="AK">Alaska</option>
           <option value="AZ">Arizona</option>
@@ -265,37 +269,37 @@ function test_input($data) {
         <br>
 
         <label for="Zip_Code">Zip Code:
-        <input type="text" id=Zip_Code name="Zip Code" placeholder="Zip Code Here"></label>
+        <input type="text" id=Zip_Code name="Zip Code" placeholder="Zip Code Here" value="<?php echo htmlspecialchars($zipCode); ?>"></label>
         <label class="e" id="Z"> Zipcode must be between 5 and 9 numbers</label>
         <br>
 
         <label for="Phone_Number">Phone Number:
-        <input type="text" id=Phone_Number name="Phone Number" placeholder="Phone Number Here"></label>
+        <input type="text" id=Phone_Number name="Phone Number" placeholder="Phone Number Here"  value="<?php echo htmlspecialchars($phoneNumber); ?>"></label>
         <label class="e" id="PN"> Phone Number must 10 digits with no punctuation.       </label>
         <br>
 
 
         <label for="Email">Email:
-        <input type="text" id=Email name="Email" placeholder="Email Here"></label>
+        <input type="text" id=Email name="Email" placeholder="Email Here" value="<?php echo htmlspecialchars($email); ?>"></label>
         <label class="e" id="E"> Please enter a valid Email address</label>
         <br>
 
                 <label>Gender:
-                <input type="radio" id=male name="Gender">male
-                <input type="radio" id=female name="Gender">female
-                <input type="radio" id=other name="Gender" >other</label>
+                <input type="radio" id=male name="Gender" <?php echo ($gender === 'male') ? 'checked' : ''; ?>>male
+                <input type="radio" id=female name="Gender" <?php echo ($gender === 'female') ? 'checked' : ''; ?>>female
+                <input type="radio" id=other name="Gender" <?php echo ($gender === 'other') ? 'checked' : ''; ?>>other</label>
         <label class="e" id="G"> Please select one      </label>
                 <br>
 
                 <label>Marital Status:
-                <input type="radio" id=single name="Marital Status"><label for="single">Single</label>
-                <input type="radio" id=married name="Marital Status"><label for="married">Married</label></label>
+                <input type="radio" id=single name="Marital Status" <?php echo ($maritalStatus === 'single') ? 'checked' : ''; ?>><label for="single">Single</label>
+                <input type="radio" id=married name="Marital Status" <?php echo ($maritalStatus === 'married') ? 'checked' : ''; ?>><label for="married">Married</label></label>
         <label class="e" id="M"> Please select one </label>
                 <br>
 
 
         <label for="DOB">Date of Birth:
-        <input type="date" id=DOB name="DOB" placeholder="Calendar popup Here"></label>
+        <input type="date" id=DOB name="DOB" placeholder="Calendar popup Here" value="<?php echo htmlspecialchars($dob); ?>"></label>
         <label class="e" id="D"> Please enter your date of birth  </label>
         <br>
 
