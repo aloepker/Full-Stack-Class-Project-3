@@ -1,5 +1,4 @@
 <?php
-// Define variables and initialize with empty values
 $username = $password = $repeatPassword = $firstName = $lastName = $address1 = $address2 = $city = $state = $zipCode = $phoneNumber = $email = $gender = $maritalStatus = $dob = '';
 $errors = [];
 
@@ -10,7 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["Username"] = "Username is required";
     } else {
         $username = test_input($_POST["Username"]);
-        // Perform additional username validation if needed
     }
 
     // Validate Password
@@ -18,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["Password"] = "Password is required";
     } else {
         $password = test_input($_POST["Password"]);
-        // Perform additional password validation if needed
     }
 
     // Validate Repeat Password
@@ -33,7 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["First_Name"] = "First Name is required";
     } else {
         $firstName = test_input($_POST["First_Name"]);
-        // Perform additional validation if needed
     }
 
     // Validate Last Name
@@ -41,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["Last_Name"] = "Last Name is required";
     } else {
         $lastName = test_input($_POST["Last_Name"]);
-        // Perform additional validation if needed
     }
 
     // Validate Address
@@ -49,7 +44,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["Address1"] = "Address is required";
     } else {
         $address1 = test_input($_POST["Address1"]);
-        // Perform additional validation if needed
     }
 
     // Validate City
@@ -57,7 +51,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["City"] = "City is required";
     } else {
         $city = test_input($_POST["City"]);
-        // Perform additional validation if needed
     }
 
     // Validate State
@@ -108,11 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $dob = test_input($_POST["DOB"]);
     }
-
-if (!empty($errors)) {
-        echo "Errors found"; // Add this line for debugging
-    }
-
 }
 function test_input($data) {
     $data = trim($data);
